@@ -1,8 +1,10 @@
 import "./pokemonContainer.styles.scss";
 
-const PokemonContainer: React.FC = () => {
+const PokemonContainer: React.FC = ({ children }) => {
     return (
-        <div className="container"></div>
+        <div className="container">
+          {children}
+        </div>
     )
 };
 
