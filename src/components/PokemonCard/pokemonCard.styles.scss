@@ -1,16 +1,35 @@
 .containerCard {
-  width: 200px;
+  width: 20vw;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  float: left;
   background-color: tomato;
+  border: 2px solid black;
   border-radius: 24px;
-  margin: 32px;
+  margin: 32px 0;
+  box-sizing: border-box;
+  justify-self: center;
+  
 
   img {
-    max-width: 80%;
+    max-width: 90%;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
+  }
+
+  h1 {
+    font-family: 'Pokemon Solid';
+    line-height: 1.5em;
+    margin: 16px 0;
+    letter-spacing: 0.06em;
+    font-size: 28px;
+  }
+
+  h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
   }
 }

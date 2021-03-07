@@ -1,5 +1,5 @@
-import { PokemonData } from "assets/data/appStrings";
 import { action, makeObservable, observable } from "mobx";
+import { PokemonData } from "screens/App/appTypes";
 
 export class PokemonCardState {
   pokemonData?: PokemonData;

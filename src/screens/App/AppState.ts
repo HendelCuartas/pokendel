@@ -1,5 +1,6 @@
-import { Pokemon } from "assets/data/appStrings";
+
 import { action, makeObservable, observable, runInAction } from "mobx";
+import { Pokemon } from "./appTypes";
 
 export class AppState {
   pokemonList: Array<Pokemon> = [];

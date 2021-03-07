@@ -1,12 +1,7 @@
-export interface Pokemon {
-  name: string;
-  url: string;
-}
+const appStrings = {
+  title: "Pokedex",
+  inputLabel: "Busca tu pokemon",
+  inputPlaceholder: "Pikachu",
+};
 
-export interface PokemonData {
-  name: string;
-  id: string;
-  weight: number;
-  height: number;
-  types: Array<string>;
-}
+export default appStrings;

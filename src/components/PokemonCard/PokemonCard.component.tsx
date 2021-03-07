@@ -22,17 +22,17 @@ const PokemonCard: React.FC<PokemonCardProps> = ({
   return <div className="containerCard">
     <img src={state.getPokemonImageUrl()} alt="a nice pokemon" />
     <h1>
-      {`Nombre: ${state.pokemonData?.name}`}
+      {`${state.pokemonData?.name}`}
     </h1>
-    <h3>
+    <h4>
       {`Peso: ${state.pokemonData?.weight}lb`}
-    </h3>
+    </h4>
     <h4>
       {`Alto : ${state.pokemonData?.height}ft`}
     </h4>
     <h4>
-      {`Tipos: ${state.pokemonData?.types.map((el: any, index: number, array: any) =>
-        index !== array.length - 1 ? el.type.name + "/" : el.type.name)}`}
+      {`Tipos: ${state.pokemonData?.types.map((el: any) =>
+        el.type.name)}`}
     </h4>
   </div>;
 }
