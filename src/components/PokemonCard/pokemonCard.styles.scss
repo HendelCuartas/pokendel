@@ -1,6 +1,6 @@
 .containerCard {
-  width: 20vw;
   height: 500px;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +11,6 @@
   margin: 32px 0;
   box-sizing: border-box;
   justify-self: center;
-  
 
   img {
     max-width: 90%;

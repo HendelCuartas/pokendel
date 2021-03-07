@@ -1,7 +1,21 @@
+@import "styles/mixins.styles";
+
 .container {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: 24% 24% 24% 24%;
-  justify-content: center;
+  grid-template-columns: 45% 45%;
+  justify-content: space-around;
+
+  @include above(728px) {
+    grid-template-columns: 28% 28% 28%;
+  }
+
+  @include above(992px) {
+    grid-template-columns: 20% 20% 20% 20%;
+  }
+
+  @include above(1440px) {
+    grid-template-columns: 15% 15% 15% 15% 15%;
+  }
 }
