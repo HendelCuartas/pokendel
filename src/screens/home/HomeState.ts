@@ -1,8 +1,8 @@
 
 import { action, makeObservable, observable, runInAction } from "mobx";
-import { Pokemon } from "./appTypes";
+import { Pokemon } from "./homeData";
 
-export class AppState {
+export class HomeState {
   pokemonList: Array<Pokemon> = [];
 
   setPokemonsList = (pokemonList: Array<Pokemon>) => {
@@ -18,7 +18,7 @@ export class AppState {
           name: el.name,
           url: el.url,
         }
-      })
+      });
       runInAction(() => {
         this.setPokemonsList(arrayPokemon);
       });
