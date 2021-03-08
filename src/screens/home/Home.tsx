@@ -20,7 +20,7 @@ const Home: React.FC = observer(() => {
       <PokemonContainer>
         {
           state.pokemonList.map((el, idx) => (
-            <Link to={`/pokemon/${el.url}`} className="homeLink">
+            <Link to={`/pokemon/${encodeURIComponent(el.url)}`} className="homeLink">
               <PokemonCard pokemonUrl={el.url} key={`PokemonCard-${idx}`} />
             </Link>
           ))

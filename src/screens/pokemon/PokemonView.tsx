@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 interface PokemonViewParams {
   pokemonUrl: string;
@@ -7,13 +7,16 @@ interface PokemonViewParams {
 const PokemonView: React.FC = () => {
   const { pokemonUrl } = useParams<PokemonViewParams>();
 
-  console.log("is here")
+  console.log("is here");
   return (
     <div>
       <h1>POKEMON VIEW</h1>
       <p>
         {pokemonUrl}
       </p>
+      <Link to="/">
+        VOLVER
+      </Link>
     </div>
   )
 }

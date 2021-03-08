@@ -10,11 +10,11 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
+        <Route path="/pokemon/:pokemonUrl">
+          <PokemonView />
+        </Route>
         <Route path="/">
           <Home />
-        </Route>
-        <Route path="/pokemon">
-          <PokemonView />
         </Route>
       </Switch>
     </BrowserRouter>
