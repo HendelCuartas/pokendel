@@ -1,4 +1,4 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, makeObservable, observable, runInAction } from "mobx";
 import { PokemonData } from "screens/home/homeData";
 
 
@@ -14,7 +14,7 @@ export class PokemonCardState {
       let response = await fetch(url);
       let data = await response.json() as any;
 
-      const arrayPokemonData: PokemonData = {
+      const pokemonData: PokemonData = {
         name: data.name,
         id: data.id,
         weight: data.weight,
@@ -22,7 +22,9 @@ export class PokemonCardState {
         types: data.types,
       }
 
-      return arrayPokemonData;
+      runInAction(() => {
+        this.setPokemonData(pokemonData);
+      })
     } catch (error) {
       console.error(error);
       throw new Error(error);
