@@ -11,8 +11,11 @@ const Home: React.FC = observer(() => {
   const [state] = useState(new HomeState());
 
   useEffect(() => {
-    state.fetchPokemonList(POKEMONS_URL);
-  });
+    const fetchData = async () => {
+      await state.fetchPokemonList(POKEMONS_URL);
+    }
+    fetchData();
+  }, [state]);
 
   return (
     <div className="home">

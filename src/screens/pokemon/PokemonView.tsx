@@ -7,7 +7,6 @@ interface PokemonViewParams {
 const PokemonView: React.FC = () => {
   const { pokemonUrl } = useParams<PokemonViewParams>();
 
-  console.log("is here");
   return (
     <div>
       <h1>POKEMON VIEW</h1>
